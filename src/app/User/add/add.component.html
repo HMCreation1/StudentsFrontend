@@ -32,23 +32,24 @@
       </div>
     </div>
     
-    <div class="form-group gender-options">
-      <label>Gender:</label>
-      <div class="radio-group" required #gender="ngModel" ngModel name="gender">
-        <label>
-          <input type="radio" [(ngModel)]="student.gender" name="gender" value="Male" required> Male
-        </label>
-        <label>
-          <input type="radio" [(ngModel)]="student.gender" name="gender" value="Female"> Female
-        </label>
-        <label>
-          <input type="radio" [(ngModel)]="student.gender" name="gender" value="Other"> Other
-        </label>
-      </div>
-      <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="error-message">
-        Gender is required
-      </div>
-    </div>
+   <div class="form-group gender-options">
+  <label>Gender:</label>
+  <div class="radio-group">
+    <label>
+      <input type="radio" [(ngModel)]="student.gender" name="gender" value="Male" required #gender="ngModel"> Male
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="student.gender" name="gender" value="Female"> Female
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="student.gender" name="gender" value="Other"> Other
+    </label>
+  </div>
+  <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="error-message">
+    Gender is required
+  </div>
+</div>
+
     
     <div class="form-group">
       <label for="stdClass">Class:</label>

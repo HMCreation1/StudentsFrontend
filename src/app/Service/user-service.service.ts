@@ -8,7 +8,7 @@ export class UserServiceService {
   
   
   // private baseUrl = 'http://localhost:8080/api'; // Localhost URL for testing            
-  private baseUrl = 'https://comfortable-flexibility-production.up.railway.app';  // Railway URL for production
+  private baseUrl = 'https://studentmanagementbackend.up.railway.app';  // Railway URL for production
   
 
   constructor(private http: HttpClient) { }
