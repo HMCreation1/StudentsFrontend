@@ -13,12 +13,12 @@ export class UserServiceService {
 
   constructor(private http: HttpClient) { }
   getAllStudents() {
-    return this.http.get(this.baseUrl+"/students");
+    return this.http.get(this.baseUrl+"/api/students");
   }
   addStudent(student:any) {
-    return this.http.post(this.baseUrl+"/addstudent", student);
+    return this.http.post(this.baseUrl+"/api/addstudent", student);
   }
   deleteStudent(id: any) {
-    return this.http.delete(this.baseUrl+`/delete/${id}`);
+    return this.http.delete(this.baseUrl+`/api/delete/${id}`);
   }
 }
